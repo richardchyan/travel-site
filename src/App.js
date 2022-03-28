@@ -1,9 +1,23 @@
+import Accordion from './components/Accordion';
 import './App.css';
+import Navbar from './Navbar'
+import Dropdown from './components/Dropdown';
+import Slider from './Slider/Slider';
+import SliderData from './Slider/SliderData';
+import vacayimg from './images/img1.jpg'
+import Carousel from './components/Carousel';
+import TextCards from './TextCards';
+import ImageCards from './ImageCards';
 
 function App() {
+
   return (
     <div className="App">
-     <h1 className="text-5xl text-[#5995da] underline decoration-double decoration-teal-500">React Tailwind V3 Template</h1>
+     <Navbar />
+     {/* <Dropdown/>  */}
+     {/* <Slider slides={SliderData}/> */}
+     <TextCards />
+     <ImageCards />
     </div>
   );
 }
