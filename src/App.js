@@ -8,6 +8,7 @@ import vacayimg from './images/img1.jpg'
 import Carousel from './components/Carousel';
 import TextCards from './TextCards';
 import ImageCards from './ImageCards';
+import Footer from './Footer';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
      {/* <Slider slides={SliderData}/> */}
      <TextCards />
      <ImageCards />
+     <Footer />
     </div>
   );
 }
