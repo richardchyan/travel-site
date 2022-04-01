@@ -1,15 +1,19 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import { useInView } from 'react-intersection-observer'
 
 const Footer = () => {
+
+  const { ref: footerRef, inView: elementVisible } = useInView({ triggerOnce: true, threshold: 1 })
+
   return (
-    <div className="max-w-screen-xl px-4 my-4 m-auto">
-      <footer className="grid grid-cols-1 sm:grid-cols-2 space-y-8 sm:space-y-0 lg:gap-4">
+    <div className="max-w-screen-xl px-4 my-4">
+      <footer ref={footerRef} className={elementVisible ? "grid grid-cols-1 sm:grid-cols-2 space-y-8 sm:space-y-0 lg:gap-4 -translate-y-0 duration-1300 ease-in-out opacity-100" : "grid grid-cols-1 sm:grid-cols-2 space-y-8 sm:space-y-0 lg:gap-4 opacity-0 translate-y-16"}>
         {/* four footer columns */}
         {/* group 1 */}
-        <div className="flex justify-evenly space-x-20 text-left">
+        <div className="flex justify-evenly space-x-20 sm:space-x-0 text-left">
           {/* col 1 */}
           <div className="">
-            <ul className="flex flex-col space-y-10">
+            <ul className="flex flex-col space-y-10 md:space-y-4">
               <li className="font-bold">Company</li>
               <li className="text-xs">
                 <a href="#">About</a>
@@ -33,7 +37,7 @@ const Footer = () => {
           </div>
           {/* col 2 */}
           <div>
-            <ul className="flex flex-col space-y-10">
+            <ul className="flex flex-col space-y-10 md:space-y-4">
               <li className="font-bold">Explore</li>
               <li className="text-xs">
                 <a href="#">Canada travel guide</a>
@@ -57,10 +61,10 @@ const Footer = () => {
           </div>
         </div>
         {/* group 2 */}
-        <div className="flex justify-evenly space-x-20 text-left px-6">
+        <div className="flex justify-evenly space-x-20 sm:space-x-0 text-left">
           {/* col 3 */}
           <div>
-            <ul className="flex flex-col space-y-10">
+            <ul className="flex flex-col space-y-10 md:space-y-4">
               <li className="font-bold">Help</li>
               <li className="text-xs">
                 <a href="#">Support</a>
@@ -81,8 +85,8 @@ const Footer = () => {
           </div>
           {/* col 4 */}
           <div>
-            <ul className="flex flex-col space-y-10">
-              <li className="font-bold">Terms and Policies</li>
+            <ul className="flex flex-col space-y-10 md:space-y-4">
+              <li className="font-bold">Terms &amp; Policies</li>
               <li className="text-xs">
                 <a href="#">Privacy Policy</a>
               </li>

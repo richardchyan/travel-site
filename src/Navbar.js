@@ -17,6 +17,7 @@ const Navbar = () => {
       document.querySelector('html').style.overflow = 'scroll';
    }
 
+ 
   return (
     <nav className="mb-4 py-3 sm:py-5 border-b-2 border-gray-200">
       <div className="relative flex justify-between items-center max-w-screen-xl px-8 m-auto z-40">
@@ -36,7 +37,7 @@ const Navbar = () => {
               <a href="#">Language</a>
             </li>
             <li className="font-semibold text-lg hover:text-blue-600 mb-3">
-              <a href="#">List Your Property</a>
+              <a href="#">Hot Destinations</a>
             </li>
             <li className="font-semibold text-lg hover:text-blue-600 mb-3">
               <a href="#">Flights</a>
@@ -54,7 +55,7 @@ const Navbar = () => {
               <a href="#">Language</a>
             </li>
             <li className="font-semibold text-md hover:text-blue-600">
-              <a href="#">List Your Property</a>
+              <a href="#">Hot Destinations</a>
             </li>
             <li className="font-semibold text-md hover:text-blue-600">
               <a href="#">Flights</a>

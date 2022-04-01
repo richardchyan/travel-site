@@ -10,18 +10,20 @@ import TextCards from './TextCards';
 import ImageCards from './ImageCards';
 import Footer from './Footer';
 
+
+
+
 function App() {
 
   return (
     <div className="App">
      <Navbar />
-     {/* <Dropdown/>  */}
-     {/* <Slider slides={SliderData}/> */}
      <TextCards />
      <ImageCards />
      <Footer />
     </div>
   );
+
 }
 
 export default App;
