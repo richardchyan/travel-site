@@ -6,11 +6,11 @@ const Footer = () => {
   const { ref: footerRef, inView: elementVisible } = useInView({ triggerOnce: true, threshold: 1 })
 
   return (
-    <div className="max-w-screen-xl px-4 my-4">
-      <footer ref={footerRef} className={elementVisible ? "grid grid-cols-1 sm:grid-cols-2 space-y-8 sm:space-y-0 lg:gap-4 -translate-y-0 duration-1300 ease-in-out opacity-100" : "grid grid-cols-1 sm:grid-cols-2 space-y-8 sm:space-y-0 lg:gap-4 opacity-0 translate-y-16"}>
+    <div className="max-w-screen-xl py-10 m-auto">
+      <footer ref={footerRef} className={elementVisible ? "grid grid-cols-1 sm:grid-cols-2 space-y-10 sm:space-y-0 lg:gap-4 -translate-y-0 duration-1300 ease-in-out opacity-100" : "grid grid-cols-1 sm:grid-cols-2 space-y-8 sm:space-y-0 lg:gap-4 opacity-0 translate-y-16"}>
         {/* four footer columns */}
         {/* group 1 */}
-        <div className="flex justify-evenly space-x-20 sm:space-x-0 text-left">
+        <div className="flex justify-between sm:justify-around space-x-20 sm:space-x-0 text-left px-8">
           {/* col 1 */}
           <div className="">
             <ul className="flex flex-col space-y-10 md:space-y-4">
@@ -35,6 +35,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+          {/* col 1 end */}
           {/* col 2 */}
           <div>
             <ul className="flex flex-col space-y-10 md:space-y-4">
@@ -59,9 +60,10 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+          {/* col 2 end */}
         </div>
         {/* group 2 */}
-        <div className="flex justify-evenly space-x-20 sm:space-x-0 text-left">
+        <div className="flex justify-between sm:justify-around space-x-20 sm:space-x-0 text-left px-8">
           {/* col 3 */}
           <div>
             <ul className="flex flex-col space-y-10 md:space-y-4">
@@ -83,6 +85,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+          {/* col3 end */}
           {/* col 4 */}
           <div>
             <ul className="flex flex-col space-y-10 md:space-y-4">
@@ -101,6 +104,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+          {/* col4 end */}
         </div>
       </footer>
       <div>

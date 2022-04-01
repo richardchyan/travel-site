@@ -16,10 +16,6 @@ const Imagecards = () => {
   const { ref: secondRef, inView: secondGroupVisible } = useInView({ triggerOnce: true, threshold: 1})
   const { ref: thirdRef, inView: thirdGroupVisible } = useInView({ triggerOnce: true, threshold: 1})
 
-  console.log(firstGroupVisible)
-  console.log(secondGroupVisible)
-  console.log(thirdGroupVisible)
-
   return (
     <div className="max-w-screen-xl m-auto px-8 my-4">
       {/* mobile all stacked, sm and above 3/2/1 div format  */}
